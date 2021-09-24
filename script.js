@@ -118,6 +118,18 @@ const createUsername = function (accs) {
 };
 createUsername(accounts);
 
+// Event Handler
+
+let currentAccount;
+
+btnLogin.addEventListener('click', function (e) {
+  e.preventDefaul();
+
+  currentAcount = accounts.find(
+    acc => acc.username === inputLoginUsername.value
+  );
+});
+
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
